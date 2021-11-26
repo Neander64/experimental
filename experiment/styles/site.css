@@ -1,0 +1,135 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+h1, h2 {
+    color: darkblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h3 {
+    color: darkblue;
+    margin-bottom: 5px;
+}
+
+main {
+    background-color: lightblue; 
+    padding:4px; 
+    color: #202020;
+    grid-area: main;
+    margin-bottom: 20px;
+}
+
+.experience {
+    padding: 4px;
+    margin-bottom:4px;
+    background-color: white;
+    border: inset 1px;
+    color: #222;
+}
+.experience .title {
+    font-weight: bold;
+}
+
+header > img {
+    border: 1px solid #808080;
+    padding: 2px;
+    margin: 8px;
+    border-radius: 15px;
+}
+#siteName {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    margin-top:0;
+    margin-bottom:0;
+}
+#headshot {
+    width: 40px;
+    height: 40px;
+    margin-left: 2px;
+}
+
+aside {
+    grid-area: aside;
+    margin: 5px;
+    margin-right: 0px;
+}
+aside label {
+    font-size: 12px;
+}
+aside input {
+    float: right;
+    border-radius: 3px;
+    border-style:groove;
+    border-width: 1px;
+    margin-right:0px;
+}
+aside .inputLine {
+    display:inline-block;
+    width:100%;
+}
+aside textarea {
+    padding-right: 8px;
+    padding-left: 0px;
+    margin-left:0px;
+}
+#topic {
+    width: 100%;
+    border-width: 1px;
+    border-style:groove;
+}
+#contact {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+footer {
+    background-color: #202020;
+    color:lightblue;
+    text-align: center;
+    padding: 2px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left:0;
+    grid-area: footer;
+}
+
+#menu li {
+    display: inline;
+    padding: 12px;
+    background-color: lightgray;
+    border-radius: 3px;
+}
+#menu li a {
+    color: white !important;
+    text-decoration: none;
+}
+#menu li.active {
+    background-color: lightblue;
+}
+#menu {
+    float: right;
+}
+header {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    grid-area: header;
+}
+header #menu {
+    margin-left:auto;
+}
+/*
+header #headshot, header #siteName, header #menu {
+    display: inline;   
+    vertical-align: middle;
+}*/
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-columns: auto 220px;
+    /*grid-gap: 8px;*/
+}
